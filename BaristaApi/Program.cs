@@ -6,13 +6,31 @@ namespace BaristaApi
     {
         static void Main(string[] args)
         {
-            /* pseudo-code
-            Espresso espresso = new Espresso().AddWater(20).AddBeans(b => b.AmountInG = 5 && b.Sort = CoffeSorts.Robusta).ToBravage();
-            //espresso is type of Espresso
-
-            Latte latte = new Espresso().AddWater(20).AddBeans(b => b.AmountInG = 7 && b.Sort = CoffeSorts.Robusta).AddMilk().ToBravage();
-            //latte is type of Latte
-             */
+            var Espresso = new Espresso().toFinalShot();
         }
+    }
+    class Espresso: IEspresso
+    {
+        public void addBeans()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void addWater()
+        {
+
+        }
+
+        public string toFinalShot()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    interface IEspresso
+    {
+        void addWater();
+        void addBeans();
+
+        string toFinalShot(); 
     }
 }
