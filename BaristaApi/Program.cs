@@ -6,17 +6,17 @@ namespace BaristaApi
     {
         static void Main(string[] args)
         {
-            var Espresso = new Espresso().toFinalShot();
+            var Espresso = new Espresso().addBeans().addWater().toFinalShot();
         }
     }
     class Espresso: IEspresso
     {
-        public void addBeans()
+        public IEspresso addBeans()
         {
             throw new NotImplementedException();
         }
 
-        public void addWater()
+        public IEspresso addWater()
         {
 
         }
@@ -28,8 +28,8 @@ namespace BaristaApi
     }
     interface IEspresso
     {
-        void addWater();
-        void addBeans();
+        IEspresso addWater();
+        IEspresso addBeans();
 
         string toFinalShot(); 
     }
