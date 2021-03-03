@@ -9,10 +9,12 @@ class Espresso : IBeverage
 {
     public List<string> Ingredients {get;set }
 
-    public string CupType { get; set}
-
-
-
+    public string CupType => throw new System.NotImplementedException();
+    //FDBMNNBKRTBMÖBARE
+    //HJEHEJEHEJEJ
+    //HEJHEJ
+    //This is a test.
+    //fgbaedrfbaerbe
 }
 
 class Latte : IBeverage
