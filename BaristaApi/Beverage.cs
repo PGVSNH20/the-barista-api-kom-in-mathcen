@@ -7,10 +7,12 @@ public interface IBeverage{
 
 class Espresso : IBeverage
 {
-    public List<string> Ingredients => throw new System.NotImplementedException();
+    public List<string> Ingredients {get;set }
 
-    public string CupType => throw new System.NotImplementedException();
-   
+    public string CupType { get; set}
+
+
+
 }
 
 class Latte : IBeverage
