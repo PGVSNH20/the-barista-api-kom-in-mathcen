@@ -1,36 +1,74 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BaristaApi
 {
+    
+
+
     class Program
     {
         static void Main(string[] args)
         {
-            var Espresso = new Espresso().addBeans().addWater().toFinalShot();
+            GetMeOneLatte(); 
+
+            GetMeOneEspresso();
+
+            GetMeOneLatte();
+            
+
+
         }
-    }
-    class Espresso: IEspresso
-    {
-        public IEspresso addBeans()
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        public static void GetMeOneLatte()
         {
-            throw new NotImplementedException();
+            var latte = new Latte()
+                            .addWater()
+                            .addBeans()
+                            .makeADrink();
+
+            
         }
 
-        public IEspresso addWater()
+
+        public static void GetMeOneEspresso()
         {
+            var espresso = new Espresso()
+                            .addWater()
+                            .addBeans()
+                            .makeADrink();
+
 
         }
 
-        public string toFinalShot()
-        {
-            throw new NotImplementedException();
-        }
-    }
-    interface IEspresso
-    {
-        IEspresso addWater();
-        IEspresso addBeans();
 
-        string toFinalShot(); 
     }
+
+    
+
+    
+
+
+    
 }
