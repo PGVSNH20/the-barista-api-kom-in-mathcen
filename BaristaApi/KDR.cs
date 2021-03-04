@@ -12,27 +12,27 @@ namespace BaristaApi
         public string Name { get; set; }
         public List<Bean> Beans { get; set; }
 
-        public Custom()
+        public Custom(string name)
         {
             Ingredients = new List<Ingredient>();
             Beans = new List<Bean>();
+            Name = name;
             
         }
 
-        public IBeverage addBeans(Bean.BeanTypes bean, int amount)
+        public IBeverage addBeans(int amount, Bean.BeanTypes bean)
         {
-            //Beans.Add(bean);
             Beans.Add(new Bean(bean) { beanType = bean, Amount = amount });
             return this;
         }
         public IBeverage addWater(int amount)
         {
-            Ingredients.Add(new Ingredient() { Type = "Water", Amount = amount });
+            Ingredients.Add(new Ingredient() { Type = "Vatten", Amount = amount });
             return this;
         }
         public IBeverage addMilk(int amount)
         {
-            Ingredients.Add(new Ingredient() { Amount = amount, Type = "Milk" });
+            Ingredients.Add(new Ingredient() { Amount = amount, Type = "Mjölk" });
             return this;
 
         }
@@ -47,11 +47,10 @@ namespace BaristaApi
 
                 Console.WriteLine(drink.Amount + "%" + " " + drink.Type);
 
-                foreach(var bean in Beans)
-                {
-                    Console.WriteLine(bean.beanType);
-                }
-
+            }
+            foreach (var bean in Beans)
+            {
+                Console.WriteLine(bean.Amount + "%" + " " + bean.beanType);
             }
 
             return this;

@@ -18,7 +18,13 @@ namespace BaristaApi
         public enum BeanTypes
         {
             Zoega,
-            Ica
+            Lavazza,
+            Rozza,
+            DeLuxe,
+            Gimoka,
+            Starbucks,
+            Gevalia,
+            IcaBasic
         }
 
         public Bean(BeanTypes bean)

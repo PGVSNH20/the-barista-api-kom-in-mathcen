@@ -6,7 +6,7 @@ public interface IBeverage{
     List<Bean> Beans { get; set; }
     string Name { get; set; }
     IBeverage addWater(int amount);
-    IBeverage addBeans(Bean.BeanTypes bean, int amount);
+    IBeverage addBeans(int amount, Bean.BeanTypes bean);
     IBeverage addMilk(int amount);
     IBeverage addMilkFoam(int amount);
     IBeverage addEspresso(int amount);

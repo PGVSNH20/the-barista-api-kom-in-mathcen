@@ -65,9 +65,10 @@ namespace BaristaApi
 
         public static void GetMyCustomDrink()
         {
-            var custom = new Custom()
+            var custom = new Custom("Latte")
                 .addWater(90)
-                .addBeans(Bean.BeanTypes.Zoega)
+                .addBeans(50, Bean.BeanTypes.IcaBasic)
+                .addMilk(1)
                 .makeADrink();
         }
 
