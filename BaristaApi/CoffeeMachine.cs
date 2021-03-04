@@ -36,6 +36,19 @@ namespace BaristaApi
             return this;
 
         }
+        public IBeverage addMilkFoam(int amount)
+        {
+            Ingredients.Add(new Ingredient() { Amount = amount });
+            return this;
+        }
+
+        public IBeverage addEspresso(int amount)
+        {
+            Ingredients.Add(new Ingredient() { Amount = amount });
+            return this;
+        }
+
+
 
 
 
