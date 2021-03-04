@@ -1,20 +1,13 @@
+using BaristaApi;
 using System.Collections.Generic;
 
 public interface IBeverage{
-	List<string> Ingredients { get; }
-    string CupType { get; }
+	List<Ingredient> Ingredients { get; set; }
+    string Name { get; set; }
+    IBeverage addWater(int amount);
+    IBeverage addBeans(int amount, string type);
+    IBeverage addMilk(int amount);
+    IBeverage makeADrink();
+
 }
 
-class Espresso : IBeverage
-{
-    public List<string> Ingredients => throw new System.NotImplementedException();
-
-    public string CupType => throw new System.NotImplementedException();
-}
-
-class Latte : IBeverage
-{
-    public List<string> Ingredients => throw new System.NotImplementedException();
-
-    public string CupType => throw new System.NotImplementedException();
-}
