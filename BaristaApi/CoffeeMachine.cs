@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    public class Custom : IBeverage
+    public class CoffeeMachine : IBeverage
     {
         public List<Ingredient> Ingredients { get; set; }
         public string Name { get; set; }
 
-        public Custom()
+        public CoffeeMachine(string value)
         {
             Ingredients = new List<Ingredient>();
             
+            Name = value;
+
+                                    
         }
+
 
         public IBeverage addBeans(int amount, string type)
         {
@@ -29,7 +33,7 @@ namespace BaristaApi
         }
         public IBeverage addMilk(int amount)
         {
-            Ingredients.Add(new Ingredient() { Amount = amount, Type = "Milk" });
+            Ingredients.Add(new Ingredient() { Type = "Milk", Amount = amount  });
             return this;
 
         }

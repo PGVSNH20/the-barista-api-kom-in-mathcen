@@ -10,16 +10,18 @@ namespace BaristaApi
     {
         public List<Ingredient> Ingredients { get; set; }
         public string Name { get; set; } = "Latte";
+        public static string[] BeanSelection { get; set; }
 
 
         public Latte()
         {
             Ingredients = new List<Ingredient>();
+            BeanSelection = new string[] { "Arabica", "Robusta", "Uppsala" };
         }
+        
 
 
-
-        public IBeverage addWater(int amount)
+    public IBeverage addWater(int amount)
         {
             Ingredients.Add(new Ingredient() { Type = "Vatten", Amount = amount });
             return this;
@@ -28,7 +30,7 @@ namespace BaristaApi
 
         public IBeverage addBeans(int amount, string type)
         {
-            Ingredients.Add(new Ingredient() { Amount = 12, Type = "Zoega" });
+            Ingredients.Add(new Ingredient() { Amount = 12, Type = type });
             return this;
         }
 
