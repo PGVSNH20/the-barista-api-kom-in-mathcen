@@ -3,78 +3,82 @@ using System.Collections.Generic;
 
 namespace BaristaApi
 {
-
+    
 
 
     class Program
     {
         static void Main(string[] args)
         {
-            GetMeOneLatte();
+            //GetMeOneLatte(); 
 
-            GetMeOneEspresso();
+            //GetMeOneEspresso();
 
-            GetMeOneLatte();
-
-            GetMeOneMachiatto();
-
-            GetMeOneMocha();
-
-            GetMeOneAmericano();
-
+            GetMyCustomDrink();         
+            
 
         }
 
-        public static void GetMeOneAmericano()
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
+        public static void GetMeOneLatte()
         {
-            var latte = new CoffeeMachine("Americano")
-                            .addWater(50)
-                            .addBeans(50, Bean.BeanTypes.Rozza)
+            var latte = new Latte()
+                            .addWater(60)
+                            .addBeans(22, "")
                             .makeADrink();
 
-
+            
         }
 
 
         public static void GetMeOneEspresso()
         {
-            var espresso = new CoffeeMachine("Espresso")
+            var espresso = new Espresso()
                             .addWater(20)
-                            .addBeans(31, Bean.BeanTypes.Lavazza)
-                            .addMilk(0)
+                            .addBeans(31, "")
+                            .addMilk(1)
                             .makeADrink();
 
 
         }
+        */
 
-
-        public static void GetMeOneLatte()
+        public static void GetMyCustomDrink()
         {
             var custom = new CoffeeMachine("Latte")
-                .addWater(45)
+                .addWater(90)
                 .addBeans(50, Bean.BeanTypes.IcaBasic)
                 .addMilk(1)
                 .makeADrink();
         }
 
-        public static void GetMeOneMachiatto()
-        {
-            var custom = new CoffeeMachine("Machiatto")
-                .addWater(67)
-                .addBeans(50, Bean.BeanTypes.Starbucks)
-                .addMilk(1)
-                .makeADrink();
-        }
 
-        public static void GetMeOneMocha()
-        {
-            var custom = new CoffeeMachine("Mocha")
-                .addWater(67)
-                .addBeans(50, Bean.BeanTypes.Starbucks)
-                .addMilk(1)
-                .makeADrink();
-        }
-        
+    }
 
-    }    
+    
+
+    
+
+
+    
 }
