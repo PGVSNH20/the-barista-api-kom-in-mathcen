@@ -10,6 +10,7 @@ public interface IBeverage{
     IBeverage addMilk(int amount);
     IBeverage addMilkFoam(int amount);
     IBeverage addEspresso(int amount);
+    IBeverage addChocolateSyrup(int amout);
     IBeverage makeADrink();
    
 }
