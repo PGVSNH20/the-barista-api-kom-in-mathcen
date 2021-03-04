@@ -65,7 +65,7 @@ namespace BaristaApi
 
         public static void GetMyCustomDrink()
         {
-            var custom = new Custom("Latte")
+            var custom = new CoffeeMachine("Latte")
                 .addWater(90)
                 .addBeans(50, Bean.BeanTypes.IcaBasic)
                 .addMilk(1)
