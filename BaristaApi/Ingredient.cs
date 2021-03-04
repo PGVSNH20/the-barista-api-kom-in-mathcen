@@ -12,7 +12,7 @@ namespace BaristaApi
         public int Amount { get; set; }
         public string Type { get; set; }
 
-        
+       
 
 
     }
