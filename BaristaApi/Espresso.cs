@@ -10,8 +10,7 @@ namespace BaristaApi
     {
         public List<Ingredient> Ingredients { get; set; }
         public string Name { get; set; } = "Espresso";
-
-
+        public List<Bean> Beans { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Espresso()
         {
@@ -51,6 +50,16 @@ namespace BaristaApi
             }
 
             return this;
+        }
+
+        public IBeverage addBeans(Bean bean)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBeverage addBeans(Bean.BeanTypes bean)
+        {
+            throw new NotImplementedException();
         }
     }
 }

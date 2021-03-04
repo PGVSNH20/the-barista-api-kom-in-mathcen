@@ -10,9 +10,9 @@ namespace BaristaApi
     {
         static void Main(string[] args)
         {
-            GetMeOneLatte(); 
+            //GetMeOneLatte(); 
 
-            GetMeOneEspresso();
+            //GetMeOneEspresso();
 
             GetMyCustomDrink();         
             
@@ -39,7 +39,7 @@ namespace BaristaApi
         
         
         
-        
+        /*
         public static void GetMeOneLatte()
         {
             var latte = new Latte()
@@ -61,10 +61,14 @@ namespace BaristaApi
 
 
         }
+        */
 
         public static void GetMyCustomDrink()
         {
-            var custom = new Custom().addWater(90).addBeans(7, "customBean").makeADrink();
+            var custom = new Custom()
+                .addWater(90)
+                .addBeans(Bean.BeanTypes.Zoega)
+                .makeADrink();
         }
 
 
