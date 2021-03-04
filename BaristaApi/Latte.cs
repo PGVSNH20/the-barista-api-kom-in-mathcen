@@ -52,7 +52,6 @@ namespace BaristaApi
                 Console.WriteLine(drink.Amount + "%" + " " + drink.Type);
                     
                
-
                 
             }
 
@@ -61,8 +60,14 @@ namespace BaristaApi
 
         }
 
-        
+        public IBeverage addMilkFoam(int amount)
+        {
+            throw new NotImplementedException();
+        }
 
-
+        public IBeverage addEspresso(int amount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

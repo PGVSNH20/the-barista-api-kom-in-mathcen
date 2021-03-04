@@ -49,5 +49,15 @@ namespace BaristaApi
 
             return this;
         }
+
+        public IBeverage addMilkFoam(int amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBeverage addEspresso(int amount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

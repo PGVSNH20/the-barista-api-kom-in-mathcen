@@ -6,48 +6,44 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    class Espresso : IBeverage
+    class Cappuccino : IBeverage
     {
         public List<Ingredient> Ingredients { get; set; }
-        public string Name { get; set; } = "Espresso";
+        public string Name { get; set; } = "Cappuccino";
 
-
-
-        public Espresso()
-        {
-            Ingredients = new List<Ingredient>();
+        public Cappuccino()
+        {      
+            Ingredients = new List<Ingredient>();     
         }
+
+
 
         public IBeverage addBeans(int amount, string type)
         {
-            Ingredients.Add(new Ingredient() { Type = "Espresso", Amount = 60 });
-            return this;
-        }
-
-        public IBeverage addWater(int amount)
-        {
-            Ingredients.Add(new Ingredient() { Amount = 40, Type = "Vatten" });
-            return this;
+            throw new NotImplementedException();
         }
 
         public IBeverage addMilk(int amount)
         {
-            Ingredients.Add(new Ingredient() { Amount = 40, Type = "Milk" });
+            Ingredients.Add(new Ingredient() { Type = "Hot milk", Amount = 33 });
             return this;
+        }
 
+
+        public IBeverage addWater(int amount)
+        {
+            Ingredients.Add(new Ingredient() { Type = "Vatten", Amount = amount });
+            return this;
         }
 
         public IBeverage makeADrink()
         {
             Console.WriteLine();
             Console.WriteLine($"En {Name} som innehåller:");
-
             foreach (var drink in Ingredients)
             {
-
                 Console.WriteLine(drink.Amount + "%" + " " + drink.Type);
-                
-                
+
             }
 
             return this;
@@ -55,12 +51,14 @@ namespace BaristaApi
 
         public IBeverage addMilkFoam(int amount)
         {
-            throw new NotImplementedException();
+            Ingredients.Add(new Ingredient() { Type = "Milk foam", Amount = 33 });
+            return this;
         }
 
         public IBeverage addEspresso(int amount)
         {
-            throw new NotImplementedException();
+            Ingredients.Add(new Ingredient() { Type = "Espresso", Amount = 33 });
+            return this;
         }
     }
 }

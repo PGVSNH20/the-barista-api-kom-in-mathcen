@@ -7,6 +7,8 @@ public interface IBeverage{
     IBeverage addWater(int amount);
     IBeverage addBeans(int amount, string type);
     IBeverage addMilk(int amount);
+    IBeverage addMilkFoam(int amount);
+    IBeverage addEspresso(int amount);
     IBeverage makeADrink();
 
 }
