@@ -9,7 +9,7 @@ namespace BaristaApi
     public class Ingredient
     {
         
-        //public string Name { get; set; }
+        public string Name { get; set; }
         public int Amount { get; set; }
         public string Type { get; set; }
         

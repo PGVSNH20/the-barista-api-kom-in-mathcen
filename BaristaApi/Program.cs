@@ -14,9 +14,8 @@ namespace BaristaApi
 
             GetMeOneEspresso();
 
-            GetMeOneLatte();
+            GetMyCustomDrink();         
             
-
 
         }
 
@@ -44,8 +43,8 @@ namespace BaristaApi
         public static void GetMeOneLatte()
         {
             var latte = new Latte()
-                            .addWater()
-                            .addBeans()
+                            .addWater(60)
+                            .addBeans(22, "")
                             .makeADrink();
 
             
@@ -55,11 +54,17 @@ namespace BaristaApi
         public static void GetMeOneEspresso()
         {
             var espresso = new Espresso()
-                            .addWater()
-                            .addBeans()
+                            .addWater(20)
+                            .addBeans(31, "")
+                            .addMilk(1)
                             .makeADrink();
 
 
+        }
+
+        public static void GetMyCustomDrink()
+        {
+            var custom = new Custom().addWater(90).addBeans(7, "customBean").makeADrink();
         }
 
 

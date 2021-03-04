@@ -18,18 +18,23 @@ namespace BaristaApi
             Ingredients = new List<Ingredient>();
         }
 
-
-
-        public IBeverage addBeans()
+        public IBeverage addBeans(int amount, string type)
         {
             Ingredients.Add(new Ingredient() { Type = "Espresso", Amount = 60 });
             return this;
         }
 
-        public IBeverage addWater()
+        public IBeverage addWater(int amount)
         {
             Ingredients.Add(new Ingredient() { Amount = 40, Type = "Vatten" });
             return this;
+        }
+
+        public IBeverage addMilk(int amount)
+        {
+            Ingredients.Add(new Ingredient() { Amount = 40, Type = "Milk" });
+            return this;
+
         }
 
         public IBeverage makeADrink()
