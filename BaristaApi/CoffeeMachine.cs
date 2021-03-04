@@ -54,6 +54,10 @@ namespace BaristaApi
 
         public IBeverage makeADrink()
         {
+            
+            if (Ingredient.(Ingredients)
+                
+            /*
             Console.WriteLine();
             Console.WriteLine($"En {Name} som innehåller:");
 
@@ -69,6 +73,7 @@ namespace BaristaApi
             }
 
             return this;
+            */
         }
 
         

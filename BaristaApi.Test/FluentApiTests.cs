@@ -9,7 +9,7 @@ namespace BaristaApi.Tests
             //Pseudo code
             
             // Act
-            var beverage = new CoffeeMachine("water").AddWater(1).AddBeans().ToBeverage();
+            var beverage = new CoffeeMachine("Espresso").addWater(1).addBeans(50, Bean.BeanTypes.IcaBasic).makeADrink();
             // Assert
             Assert.IsType<Espresso>(beverage);
             
