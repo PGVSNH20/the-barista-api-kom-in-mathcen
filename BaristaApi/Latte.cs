@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    public class Ingredient
+    public class Latte:IBeverage
     {
+        public List<Ingredient> Ingredients { get; set; }
+        public List<Bean> Beans { get; set; }
         public string Name { get; set; }
-        public int Amount { get; set; }
-        public string Type { get; set; }
-        public bool Milk { get; set; }
 
-     
     }
 }

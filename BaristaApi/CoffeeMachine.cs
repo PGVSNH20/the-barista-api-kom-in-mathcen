@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    public class CoffeeMachine : IBeverage
+    public class CoffeeMachine : ICoffeeMachine
     {
         public List<Ingredient> Ingredients { get; set; }
         public string Name { get; set; }
@@ -20,29 +20,29 @@ namespace BaristaApi
             
         }
 
-        public IBeverage addBeans(int amount, Bean.BeanTypes bean)
+        public ICoffeeMachine addBeans(int amount, Bean.BeanTypes bean)
         {
             Beans.Add(new Bean(bean) { beanType = bean, Amount = amount });
             return this;
         }
-        public IBeverage addWater(int amount)
+        public ICoffeeMachine addWater(int amount)
         {
             Ingredients.Add(new Ingredient() { Type = "Vatten", Amount = amount });
             return this;
         }
-        public IBeverage addMilk(int amount)
+        public ICoffeeMachine addMilk(int amount)
         {
             Ingredients.Add(new Ingredient() { Amount = amount, Type = "Mjölk" });
             return this;
 
         }
-        public IBeverage addMilkFoam(int amount)
+        public ICoffeeMachine addMilkFoam(int amount)
         {
             Ingredients.Add(new Ingredient() { Amount = amount });
             return this;
         }
 
-        public IBeverage addEspresso(int amount)
+        public ICoffeeMachine addEspresso(int amount)
         {
             Ingredients.Add(new Ingredient() { Amount = amount });
             return this;
@@ -54,6 +54,12 @@ namespace BaristaApi
 
         public IBeverage makeADrink()
         {
+
+            // if(ingrediens.contains 
+            if(Ingredients.)
+            return new Latte();
+
+            /*
             Console.WriteLine();
             Console.WriteLine($"En {Name} som innehåller:");
 
@@ -69,6 +75,11 @@ namespace BaristaApi
             }
 
             return this;
+            */
+
+
+
+
         }
 
         
