@@ -10,41 +10,21 @@ namespace BaristaApi
     {
         static void Main(string[] args)
         {
-            //GetMeOneLatte(); 
+            GetMeOneAmericano(); 
 
-            //GetMeOneEspresso();
+            GetMeOneEspresso();
 
             GetMyCustomDrink();         
             
 
         }
-
-
-
+ 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /*
-        public static void GetMeOneLatte()
+        public static void GetMeOneAmericano()
         {
-            var latte = new Latte()
+            var latte = new CoffeeMachine("Americano")
                             .addWater(60)
-                            .addBeans(22, "")
+                            .addBeans(22, Bean.BeanTypes.Gimoka)
                             .makeADrink();
 
             
@@ -53,15 +33,17 @@ namespace BaristaApi
 
         public static void GetMeOneEspresso()
         {
-            var espresso = new Espresso()
+            var espresso = new CoffeeMachine("Espresso")
                             .addWater(20)
-                            .addBeans(31, "")
+                            .addBeans(5, Bean.BeanTypes.Lavazza)
                             .addMilk(1)
                             .makeADrink();
 
 
+
+
         }
-        */
+        
 
         public static void GetMyCustomDrink()
         {
@@ -73,12 +55,5 @@ namespace BaristaApi
         }
 
 
-    }
-
-    
-
-    
-
-
-    
+    }  
 }
