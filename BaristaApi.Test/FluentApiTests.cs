@@ -66,5 +66,17 @@ namespace BaristaApi.Tests
                 .MakeADrink();
             Assert.IsType<Cappuccino>(beverage);
         }
+
+        [Fact]
+        public void What_To_Expect_CustomCoffee()
+        {
+            var beverage = new CoffeeMachine()
+                .AddWater(5)
+                .AddBeans(20, Bean.BeanTypes.Gimoka)
+                .AddMilk(25)
+                .AddMilkFoam(35)
+                .MakeADrink();
+            Assert.IsType<CustomCoffee>(beverage);
+        }
     }
 }

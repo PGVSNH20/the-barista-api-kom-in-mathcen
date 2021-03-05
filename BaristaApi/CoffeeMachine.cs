@@ -59,27 +59,42 @@ namespace BaristaApi
 
         public IBeverage MakeADrink()
         {
+            if(Beans.Any(b => b.BeanAmount > 0))
+            {
+                if (Ingredients.Any(a => a.MilkAmount == 70 && Beans.Any(b => b.BeanAmount == 20)))
+                    return new Latte();
 
-            if (Ingredients.Any(a => a.MilkAmount == 70 && Beans.Any(b => b.BeanAmount == 20)))
-                return new Latte();
+                if (Ingredients.Any(a => a.WaterAmount == 20 && Beans.Any(b => b.BeanAmount == 60)))
+                    return new Espresso();
 
-            if (Ingredients.Any(a => a.WaterAmount == 20 && Beans.Any(b => b.BeanAmount == 60)))
-                return new Espresso();
+                if (Ingredients.Any(a => a.WaterAmount == 50 && Beans.Any(b => b.BeanAmount == 50)
+                    && Ingredients.Any(e => e.EspressoAmount == 1)))
+                    return new Americano();
 
-            if (Ingredients.Any(a => a.WaterAmount == 50 && Beans.Any(b => b.BeanAmount == 50)
-                && Ingredients.Any(e => e.EspressoAmount == 1)))
-                return new Americano();
+                if (Ingredients.Any(a => a.MilkAmount == 20 && Beans.Any(b => b.BeanAmount == 25)
+                    && Ingredients.Any(e => e.ChocolateSyrupAmount == 15 && (Ingredients.Any(d => d.WaterAmount == 5)))))
+                    return new Mocha();
 
-            if (Ingredients.Any(a => a.MilkAmount == 20 && Beans.Any(b => b.BeanAmount == 25)
-                && Ingredients.Any(e => e.ChocolateSyrupAmount == 15)))
-                return new Mocha();
+                if (Ingredients.Any(a => a.MilkFoamAmount == 32 && Beans.Any(b => b.BeanAmount == 40 &&
+                   (Ingredients.Any(d => d.WaterAmount == 5)))))
+                    return new Machiatto();
 
-            if (Ingredients.Any(a => a.MilkFoamAmount == 32 && Beans.Any(b => b.BeanAmount == 40)))
-                return new Machiatto();
+                if (Ingredients.Any(a => a.MilkFoamAmount == 35 && Beans.Any(b => b.BeanAmount == 20)
+                    && Ingredients.Any(e => e.MilkAmount == 25 && (Ingredients.Any(d => d.WaterAmount == 5)))))
+                    return new Cappuccino();
 
-            if (Ingredients.Any(a => a.MilkFoamAmount == 35 && Beans.Any(b => b.BeanAmount == 20)
-                && Ingredients.Any(e => e.MilkAmount == 25)))
-                return new Cappuccino();
+                else 
+                {
+                    return new CustomCoffee();
+                }
+
+
+
+            }
+
+            
+
+            
 
 
             else
