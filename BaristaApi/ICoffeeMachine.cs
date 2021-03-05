@@ -13,8 +13,8 @@ namespace BaristaApi
         ICoffeeMachine addBeans(int amount, Bean.BeanTypes bean);
         ICoffeeMachine addMilk(int amount);
         ICoffeeMachine addMilkFoam(int amount);
-        ICoffeeMachine addEspresso(int amount);
-        // addChocolateSyrup(int amout);
+        //ICoffeeMachine addEspresso(int amount);
+        ICoffeeMachine addChocolateSyrup(int amout);
         IBeverage makeADrink();
 
     }

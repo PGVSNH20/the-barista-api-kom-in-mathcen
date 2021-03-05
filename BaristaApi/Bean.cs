@@ -11,7 +11,7 @@ namespace BaristaApi
 
         //public Beans beanType;
         public BeanTypes beanType;
-        public int Amount { get; set; }
+        public int BeanAmount { get; set; }
 
         //public int amount;
 

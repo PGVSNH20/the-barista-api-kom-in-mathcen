@@ -9,10 +9,13 @@ namespace BaristaApi
     public class Ingredient
     {
         public string Name { get; set; }
-        public int Amount { get; set; }
+        public int MilkAmount { get; set; }
+        public int WaterAmount { get; set; }
+        public int ChocolateSyrupAmount { get; set; }
+        public int MilkFoamAmount { get; set; }
         public string Type { get; set; }
-        public bool Milk { get; set; }
+        //public int Milk { get; set; }
+        
 
-     
     }
 }
