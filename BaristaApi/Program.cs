@@ -9,80 +9,35 @@ namespace BaristaApi
     class Program
     {
         static void Main(string[] args)
+
         {
+
+
             //GetMeOneLatte(); 
 
             //GetMeOneEspresso();
 
-            GetMyCustomDrink();         
-            
-
+            //GetMyCustomDrink();
+                        
+      
         }
 
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /*
-        public static void GetMeOneLatte()
-        {
-            var latte = new Latte()
-                            .addWater(60)
-                            .addBeans(22, "")
-                            .makeADrink();
-
-            
-        }
-
-
-        public static void GetMeOneEspresso()
-        {
-            var espresso = new Espresso()
-                            .addWater(20)
-                            .addBeans(31, "")
-                            .addMilk(1)
-                            .makeADrink();
-
-
-        }
-        */
-
         public static void GetMyCustomDrink()
         {
-            var latte = new CoffeeMachine("Latte")
-                .addWater(0)
-                .addBeans(30, Bean.BeanTypes.IcaBasic)
-                .addMilk(70)
-                .makeADrink();
+            var Americano = new CoffeeMachine()
+                .AddWater(50)
+                .AddBeans(50, Bean.BeanTypes.Rozza)
+                .AddEspresso(1)
+                .MakeADrink();
 
 
 
-            var espresso = new CoffeeMachine("Espresso")
-                .addWater(0)
-                .addBeans(30, Bean.BeanTypes.IcaBasic)
-                .addMilk(0)
-                .makeADrink();
 
 
         }
 
-
+        */
 
 
 
