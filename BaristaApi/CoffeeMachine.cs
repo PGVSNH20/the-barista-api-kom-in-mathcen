@@ -64,17 +64,31 @@ namespace BaristaApi
         {
             
             if (Ingredients.Any(a => a.MilkAmount > 0 && Beans.Any(b => b.BeanAmount > 0))) return new Latte();
-            
+
+            if (Ingredients.Any(x => x.WaterAmount > 0 && Beans.Any(c => c.BeanAmount > 0))) return new Espresso();
+  
+            if (Ingredients.Any(a => a.MilkFoamAmount > 0 && Beans.Any(b => b.BeanAmount > 0))) return new Machiatto();
+
+                
+
             else
             {
-                
+
                 throw new Exception("FEL");
             }
+
 
 
             // if(ingrediens.contains 
             //if (Ingredients.Contains()) ;
             
+
+           // if (Ingredients.Contains
+                { return new Espresso(); }
+                    // if(ingrediens.contains 
+
+                    
+
 
             /*
             Console.WriteLine();

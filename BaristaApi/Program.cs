@@ -10,58 +10,37 @@ namespace BaristaApi
     {
         static void Main(string[] args)
         {
-            //GetMeOneLatte(); 
-
-            //GetMeOneEspresso();
 
             GetMyCustomDrink();         
             
 
         }
-
-
-
+ 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /*
-        public static void GetMeOneLatte()
-        {
-            var latte = new Latte()
-                            .addWater(60)
-                            .addBeans(22, "")
-                            .makeADrink();
+        //public static void GetMeOneAmericano()
+        //{
+        //    var latte = new CoffeeMachine("Americano")
+        //                    .addWater(60)
+        //                    .addBeans(22, Bean.BeanTypes.Gimoka)
+        //                    .makeADrink();
 
             
-        }
+        //}
 
 
-        public static void GetMeOneEspresso()
-        {
-            var espresso = new Espresso()
-                            .addWater(20)
-                            .addBeans(31, "")
-                            .addMilk(1)
-                            .makeADrink();
+        //public static void GetMeOneEspresso()
+        //{
+        //    var espresso = new CoffeeMachine("Espresso")
+        //                    .addWater(20)
+        //                    .addBeans(5, Bean.BeanTypes.Lavazza)
+        //                    .addMilk(1)
+        //                    .makeADrink();
 
 
-        }
-        */
+
+
+        //}
+        
 
         public static void GetMyCustomDrink()
         {
@@ -94,4 +73,7 @@ namespace BaristaApi
 
 
     
-}
+
+    }  
+
+
