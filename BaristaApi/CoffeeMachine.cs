@@ -11,108 +11,84 @@ namespace BaristaApi
         public List<Ingredient> Ingredients { get; set; }
         public string Name { get; set; }
         public List<Bean> Beans { get; set; }
-        //public int _milk;
+       
        
 
-        public CoffeeMachine(string name)
+        public CoffeeMachine()
         {
             Ingredients = new List<Ingredient>();
             Beans = new List<Bean>();
-            Name = name;
+            
             
         }
 
-        public ICoffeeMachine addBeans(int amount, Bean.BeanTypes bean)
+        public ICoffeeMachine AddBeans(int amount, Bean.BeanTypes bean)
         {
             Beans.Add(new Bean(bean) { beanType = bean, BeanAmount = amount });
             return this;
         }
-        public ICoffeeMachine addWater(int amount)
+        public ICoffeeMachine AddWater(int amount)
         {
-            Ingredients.Add(new Ingredient() { Type = "Vatten", WaterAmount = amount });
+            Ingredients.Add(new Ingredient() { WaterAmount = amount });
             return this;
         }
-        public ICoffeeMachine addMilk(int amount)
+        public ICoffeeMachine AddMilk(int amount)
         {
-            Ingredients.Add(new Ingredient() { MilkAmount = amount, Type = "Mjölk" });
+            Ingredients.Add(new Ingredient() { MilkAmount = amount});
             return this;
 
         }
-        public ICoffeeMachine addMilkFoam(int amount)
+        public ICoffeeMachine AddEspresso(int amount)
+        {
+            Ingredients.Add(new Ingredient() { EspressoAmount = amount });
+            return this;
+        }
+        public ICoffeeMachine AddMilkFoam(int amount)
         {
             Ingredients.Add(new Ingredient() { MilkFoamAmount = amount });
             return this;
         }
 
-        public ICoffeeMachine addChocolateSyrup(int amount)
+        public ICoffeeMachine AddChocolateSyrup(int amount)
         {
             Ingredients.Add(new Ingredient() { ChocolateSyrupAmount = amount });
             return this;
         }
 
-        //public ICoffeeMachine addEspresso(int amount)
-        //{
-        //    Ingredients.Add(new Ingredient() { BeanAmount = amount });
-        //    return this;
-        //}
 
 
-
-
-
-        public IBeverage makeADrink()
+        public IBeverage MakeADrink()
         {
-            
-            if (Ingredients.Any(a => a.MilkAmount > 0 && Beans.Any(b => b.BeanAmount > 0))) return new Latte();
 
-            if (Ingredients.Any(x => x.WaterAmount > 0 && Beans.Any(c => c.BeanAmount > 0))) return new Espresso();
-  
-            if (Ingredients.Any(a => a.MilkFoamAmount > 0 && Beans.Any(b => b.BeanAmount > 0))) return new Machiatto();
+            if (Ingredients.Any(a => a.MilkAmount == 70 && Beans.Any(b => b.BeanAmount == 20)))
+                return new Latte();
 
-                
+            if (Ingredients.Any(a => a.WaterAmount == 20 && Beans.Any(b => b.BeanAmount == 60)))
+                return new Espresso();
+
+            if (Ingredients.Any(a => a.WaterAmount == 50 && Beans.Any(b => b.BeanAmount == 50)
+                && Ingredients.Any(e => e.EspressoAmount == 1)))
+                return new Americano();
+
+            if (Ingredients.Any(a => a.MilkAmount == 20 && Beans.Any(b => b.BeanAmount == 25)
+                && Ingredients.Any(e => e.ChocolateSyrupAmount == 15)))
+                return new Mocha();
+
+            if (Ingredients.Any(a => a.MilkFoamAmount == 32 && Beans.Any(b => b.BeanAmount == 40)))
+                return new Machiatto();
+
+            if (Ingredients.Any(a => a.MilkFoamAmount == 35 && Beans.Any(b => b.BeanAmount == 20)
+                && Ingredients.Any(e => e.MilkAmount == 25)))
+                return new Cappuccino();
+
 
             else
             {
 
-                throw new Exception("FEL");
+                throw new Exception("Kontrollera maskin, fyll på vid behov. Service Tel: 031-17KAFF3TRA51G");
             }
-
-
-
-            // if(ingrediens.contains 
-            //if (Ingredients.Contains()) ;
-            
-
-           // if (Ingredients.Contains
-                { return new Espresso(); }
-                    // if(ingrediens.contains 
-
-                    
-
-
-            /*
-            Console.WriteLine();
-            Console.WriteLine($"En {Name} som innehåller:");
-
-            foreach (var drink in Ingredients)
-            {
-
-                Console.WriteLine(drink.Amount + "%" + " " + drink.Type);
-
-            }
-            foreach (var bean in Beans)
-            {
-                Console.WriteLine(bean.Amount + "%" + " " + bean.beanType);
-            }
-
-            return this;
-            */
-
-
-
 
         }
-
         
     }
 }

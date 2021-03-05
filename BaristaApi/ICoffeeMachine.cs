@@ -9,13 +9,13 @@ namespace BaristaApi
     public interface ICoffeeMachine
     {
 
-        ICoffeeMachine addWater(int amount);
-        ICoffeeMachine addBeans(int amount, Bean.BeanTypes bean);
-        ICoffeeMachine addMilk(int amount);
-        ICoffeeMachine addMilkFoam(int amount);
-        //ICoffeeMachine addEspresso(int amount);
-        ICoffeeMachine addChocolateSyrup(int amout);
-        IBeverage makeADrink();
+        ICoffeeMachine AddWater(int amount);
+        ICoffeeMachine AddBeans(int amount, Bean.BeanTypes bean);
+        ICoffeeMachine AddMilk(int amount);
+        ICoffeeMachine AddMilkFoam(int amount);
+        ICoffeeMachine AddEspresso(int amount);
+        ICoffeeMachine AddChocolateSyrup(int amout);
+        IBeverage MakeADrink();
 
     }
 }

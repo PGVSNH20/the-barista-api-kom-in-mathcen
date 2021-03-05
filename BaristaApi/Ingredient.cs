@@ -13,8 +13,7 @@ namespace BaristaApi
         public int WaterAmount { get; set; }
         public int ChocolateSyrupAmount { get; set; }
         public int MilkFoamAmount { get; set; }
-        public string Type { get; set; }
-        //public int Milk { get; set; }
+        public int EspressoAmount { get; set; }
         
 
     }
