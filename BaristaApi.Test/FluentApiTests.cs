@@ -41,8 +41,7 @@ namespace BaristaApi.Tests
                 .AddBeans(25, Bean.BeanTypes.Rozza)
                 .AddMilk(20)
                 .AddChocolateSyrup(15)
-                .MakeADrink();
-                
+                .MakeADrink();                
             Assert.IsType<Mocha>(beverage);
         }
         [Fact]
@@ -74,8 +73,9 @@ namespace BaristaApi.Tests
                 .AddWater(5)
                 .AddBeans(20, Bean.BeanTypes.Gimoka)
                 .AddMilk(25)
-                .AddMilkFoam(35)
+                .AddMilkFoam(99)
                 .MakeADrink();
+           
             Assert.IsType<CustomCoffee>(beverage);
         }
     }

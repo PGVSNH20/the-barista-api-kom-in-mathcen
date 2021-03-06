@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BaristaApi
 {
@@ -17,9 +16,7 @@ namespace BaristaApi
         public CoffeeMachine()
         {
             Ingredients = new List<Ingredient>();
-            Beans = new List<Bean>();
-            
-            
+            Beans = new List<Bean>();    
         }
 
         public ICoffeeMachine AddBeans(int amount, Bean.BeanTypes bean)
@@ -56,7 +53,6 @@ namespace BaristaApi
         }
 
 
-
         public IBeverage MakeADrink()
         {
             if(Beans.Any(b => b.BeanAmount > 0))
@@ -70,7 +66,7 @@ namespace BaristaApi
                 if (Ingredients.Any(a => a.WaterAmount == 50 && Beans.Any(b => b.BeanAmount == 50)
                     && Ingredients.Any(e => e.EspressoAmount == 1)))
                     return new Americano();
-
+                
                 if (Ingredients.Any(a => a.MilkAmount == 20 && Beans.Any(b => b.BeanAmount == 25)
                     && Ingredients.Any(e => e.ChocolateSyrupAmount == 15 && (Ingredients.Any(d => d.WaterAmount == 5)))))
                     return new Mocha();
@@ -78,6 +74,7 @@ namespace BaristaApi
                 if (Ingredients.Any(a => a.MilkFoamAmount == 32 && Beans.Any(b => b.BeanAmount == 40 &&
                    (Ingredients.Any(d => d.WaterAmount == 5)))))
                     return new Machiatto();
+
 
                 if (Ingredients.Any(a => a.MilkFoamAmount == 35 && Beans.Any(b => b.BeanAmount == 20)
                     && Ingredients.Any(e => e.MilkAmount == 25 && (Ingredients.Any(d => d.WaterAmount == 5)))))
@@ -89,17 +86,9 @@ namespace BaristaApi
                 }
 
 
-
             }
-
-            
-
-            
-
-
             else
             {
-
                 throw new Exception("Kontrollera maskin, fyll på vid behov. Service Tel: 031-17KAFF3TRA51G");
             }
 

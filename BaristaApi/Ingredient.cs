@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace BaristaApi
 {
     public class Ingredient
@@ -14,7 +10,6 @@ namespace BaristaApi
         public int ChocolateSyrupAmount { get; set; }
         public int MilkFoamAmount { get; set; }
         public int EspressoAmount { get; set; }
-        
 
     }
 }
