@@ -27,15 +27,5 @@ namespace BaristaApi
             beanType = bean;
         }
 
-
-        //public Bean(Beans beanType)
-        //{
-        //   this.beanType = beanType;
-        //}
-
-        //public Bean(BeanTypes beanType)
-        //{
-         //   this.beanType = beanType;
-        //}
     }
 }

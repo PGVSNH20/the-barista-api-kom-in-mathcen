@@ -80,7 +80,14 @@ namespace BaristaApi
                     && Ingredients.Any(e => e.MilkAmount == 25 && (Ingredients.Any(d => d.WaterAmount == 5)))))
                     return new Cappuccino();
 
-                else 
+                if (Ingredients.Any(a => a.WaterAmount == 1 
+                && Beans.Any(b => b.BeanAmount == 5)
+                && Ingredients.Any(c => c.MilkFoamAmount == 1) 
+                && Ingredients.Any(d => d.ChocolateSyrupAmount == 1)))
+                return new ArsenalDrink();
+
+
+                else
                 {
                     return new CustomCoffee();
                 }

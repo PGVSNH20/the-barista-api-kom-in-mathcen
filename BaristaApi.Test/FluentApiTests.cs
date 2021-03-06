@@ -78,5 +78,19 @@ namespace BaristaApi.Tests
            
             Assert.IsType<CustomCoffee>(beverage);
         }
+
+        [Fact]
+        public void What_To_Expect_ArsenalDrink()
+        {
+            var beverage = new CoffeeMachine()
+                .AddWater(1)
+                .AddBeans(5, Bean.BeanTypes.IcaBasic)
+                .AddMilkFoam(1)
+                .AddChocolateSyrup(1)
+                .MakeADrink();
+
+            Assert.IsType<ArsenalDrink>(beverage);
+        }
+
     }
 }

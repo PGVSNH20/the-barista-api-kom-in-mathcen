@@ -54,6 +54,14 @@ namespace BaristaApi
                 .MakeADrink();
             Console.WriteLine($" Your {beverage6.GetType().Name} is ready, enjoy!");
 
+            IBeverage beverage7 = new CoffeeMachine()
+                .AddWater(1)
+                .AddBeans(5, Bean.BeanTypes.IcaBasic)
+                .AddMilkFoam(1)
+                .AddChocolateSyrup(1)
+                .MakeADrink();
+            Console.WriteLine($" Your '{beverage7.GetType().Name}' is ready, enjoy!");
+
         }
 
     }
